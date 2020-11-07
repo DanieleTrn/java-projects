@@ -1,0 +1,19 @@
+body{
+	margin: 0 px;
+}
+
+table,tr,td,th{
+	border: 1px solid black;
+}
+
+.top{
+	
+	background-color: orange;
+	height:50px;
+	width:100%;
+}
+
+.top p{
+	text-align:right;
+	padding:15px;	
+}
