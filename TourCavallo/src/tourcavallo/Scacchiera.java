@@ -84,8 +84,6 @@ public class Scacchiera extends JFrame {
                 x += moves[1];
                 percorsoCavallo[y][x] = 1;
                 rappresenta(y,x);
-                } else{
-                    
                 }
             }
             Thread.sleep(1000);
