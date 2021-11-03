@@ -9,11 +9,15 @@ public class Server {
         ServerSocket server = null;
 
         server = new ServerSocket(6503);
-        while(true){
-            Socket client = server.accept();
-            System.out.println(client.getLocalAddress() + " si è connesso");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
-            System.out.println(reader.readLine());
+        System.out.println("Server inizializzato");
+        System.out.println("In attesa di connessioni...");
+        Socket client = server.accept();
+        System.out.println(client.getLocalAddress() + " si è connesso");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        String msg = reader.readLine();
+        while(null != msg){
+            System.out.println(msg);
+            msg = reader.readLine();
         }
     }
 }
